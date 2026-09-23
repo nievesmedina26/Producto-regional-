@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Microlearning | Productos y Servicios Banca Regional</title>
+
+ 
+
+<style>
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+font-family:Segoe UI,Arial,sans-serif;
+
+}
+
+ 
+
+body{
+
+background:#f4f7fb;
+
+color:#1f2937;
+
+}
+
+ 
+
+.container{
+
+max-width:1200px;
+
+margin:auto;
+
+padding:20px;
+
+}
+
+ 
+
+header{
+
+background:linear-gradient(135deg,#003865,#005b96);
+
+color:white;
+
+padding:40px;
+
+border-radius:18px;
+
+margin-bottom:20px;
+
+}
+
+ 
+
+header h1{
+
+font-size:2rem;
+
+margin-bottom:10px;
+
+}
+
+ 
+
+.card{
+
+background:white;
+
+border-radius:16px;
+
+padding:25px;
+
+margin-bottom:20px;
+
+box-shadow:0 4px 15px rgba(0,0,0,.08);
+
+}
+
+ 
+
+h2{
+
+color:#003865;
+
+margin-bottom:15px;
+
+}
+
+ 
+
+h3{
+
+margin-top:15px;
+
+color:#005b96;
+
+}
+
+ 
+
+ul{
+
+padding-left:20px;
+
+}
+
+ 
+
+li{
+
+margin:8px 0;
+
+}
+
+ 
+
+button{
+
+background:#005b96;
+
+color:white;
+
+border:none;
+
+padding:12px 18px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+margin-top:10px;
+
+}
+
+ 
+
+button:hover{
+
+background:#003865;
+
+}
+
+ 
+
+.module{
+
+display:none;
+
+}
+
+ 
+
+.module.active{
+
+display:block;
+
+}
+
+ 
+
+.nav{
+
+display:flex;
+
+gap:10px;
+
+flex-wrap:wrap;
+
+margin-bottom:20px;
+
+}
+
+ 
+
+.nav button{
+
+flex:1;
+
+min-width:150px;
+
+}
+
+ 
+
+.question{
+
+margin:15px 0;
+
+padding:15px;
+
+background:#f8fafc;
+
+border-radius:10px;
+
+}
+
+ 
+
+.option{
+
+display:block;
+
+margin:8px 0;
+
+padding:8px;
+
+border:1px solid #dbe3ec;
+
+border-radius:8px;
+
+cursor:pointer;
+
+}
+
+ 
+
+.correct{
+
+background:#d4edda;
+
+border-color:#28a745;
+
+}
+
+ 
+
+.wrong{
+
+background:#f8d7da;
+
+border-color:#dc3545;
+
+}
+
+ 
+
+.badge{
+
+display:inline-block;
+
+padding:6px 12px;
+
+background:#e8f0ff;
+
+border-radius:20px;
+
+margin-top:10px;
+
+font-weight:bold;
+
+color:#003865;
+
+}
+
+ 
+
+.result{
+
+font-size:1.2rem;
+
+font-weight:bold;
+
+margin-top:15px;
+
+}
+
+ 
+
+table{
+
+width:100%;
+
+border-collapse:collapse;
+
+margin-top:15px;
+
+}
+
+ 
+
+th,td{
+
+border:1px solid #ccc;
+
+padding:10px;
+
+text-align:center;
+
+}
+
+ 
+
+th{
+
+background:#003865;
+
+color:white;
+
+}
+
+</style>
+
+</head>
+
+ 
+
+<body>
+
+ 
+
+<div class="container">
+
+ 
+
+<header>
+
+<h1>Productos y Servicios de Banca Regional</h1>
+
+<p>Microlearning interactivo para formación ejecutiva</p>
+
+<div class="badge">Objetivo: Conocer productos y sus generalidades</div>
+
+</header>
+
+ 
+
+<div class="nav">
+
+<button onclick="showModule('intro')">Inicio</button>
+
+<button onclick="showModule('clientes')">Perfil Cliente</button>
+
+<button onclick="showModule('tesoreria')">Tesorería</button>
+
+<button onclick="showModule('financiamiento')">Financiamiento</button>
+
+<button onclick="showModule('comercio')">Comercio Internacional</button>
+
+<button onclick="showModule('conexion')">Conexión Regional BI</button>
+
+<button onclick="showModule('quiz')">Evaluación Final</button>
+
+</div>
+
+ 
+
+<section id="intro" class="module active card">
+
+<h2>Bienvenido</h2>
+
+ 
+
+<p>
+
+Banca Regional está orientada principalmente a grupos económicos y empresas corporativas con ventas anuales superiores a US$15 millones, con operaciones en países donde Corporación BI mantiene presencia y con interés en desarrollar relaciones bancarias en Panamá.
+
+</p>
+
+ 
+
+<h3>Propuesta de valor</h3>
+
+<ul>
+
+<li>Financiamiento empresarial.</li>
+
+<li>Manejo de liquidez.</li>
+
+<li>Inversión.</li>
+
+<li>Comercio internacional.</li>
+
+<li>Tesorería regional.</li>
+
+<li>Atención personalizada.</li>
+
+</ul>
+
+ 
+
+<button onclick="showModule('clientes')">Comenzar</button>
+
+</section>
+
+ 
+
+<section id="clientes" class="module card">
+
+<h2>Perfil de Clientes de Banca Regional</h2>
+
+ 
+
+<ul>
+
+<li>Grupos económicos regionales.</li>
+
+<li>Empresas con operaciones en múltiples países.</li>
+
+<li>Clientes con necesidades de financiamiento corporativo.</li>
+
+<li>Empresas con excedentes de liquidez.</li>
+
+<li>Organizaciones con comercio internacional recurrente.</li>
+
+<li>Accionistas y clientes patrimoniales vinculados a grupos empresariales.</li>
+
+</ul>
+
+ 
+
+<div class="question">
+
+<strong>Reflexiona:</strong>
+
+<p>¿Tu cliente necesita liquidez, financiamiento o expansión regional?</p>
+
+</div>
+
+</section>
+
+ 
+
+<section id="tesoreria" class="module card">
+
+<h2>Gestión de Tesorería y Liquidez</h2>
+
+ 
+
+<h3>Cuenta Corriente Empresarial</h3>
+
+<ul>
+
+<li>Disponibilidad inmediata.</li>
+
+<li>Transferencias locales e internacionales.</li>
+
+<li>Banca electrónica empresarial.</li>
+
+<li>Manejo de cheques.</li>
+
+</ul>
+
+ 
+
+<h3>Cuenta de Ahorro Empresarial</h3>
+
+<ul>
+
+<li>Genera intereses.</li>
+
+<li>Mantiene liquidez.</li>
+
+<li>Complementa la cuenta operativa.</li>
+
+</ul>
+
+ 
+
+<h3>Ahorro Plus</h3>
+
+<ul>
+
+<li>Saldos desde US$100,000 hasta US$5,000,000.</li>
+
+<li>Tasa de referencia: 2.25% anual.</li>
+
+<li>Fondos disponibles a la vista.</li>
+
+</ul>
+
+ 
+
+<h3>Depósitos a Plazo Fijo</h3>
+
+ 
+
+<table>
+
+<tr>
+
+<th>Monto</th>
+
+<th>6 meses</th>
+
+<th>12 meses</th>
+
+</tr>
+
+<tr>
+
+<td>$251,000 - $500,999</td>
+
+<td>2.25%</td>
+
+<td>3.50%</td>
+
+</tr>
+
+<tr>
+
+<td>$501,000 - $999,999</td>
+
+<td>2.50%</td>
+
+<td>3.75%</td>
+
+</tr>
+
+<tr>
+
+<td>$1,000,000 - $4,999,999</td>
+
+<td>2.75%</td>
+
+<td>4.00%</td>
+
+</tr>
+
+<tr>
+
+<td>$5,000,000+</td>
+
+<td>3.00%</td>
+
+<td>4.25%</td>
+
+</tr>
+
+</table>
+
+ 
+
+<h3>Banca Electrónica Empresarial</h3>
+
+<ul>
+
+<li>Consulta de cuentas.</li>
+
+<li>Transferencias.</li>
+
+<li>Autorizaciones multinivel.</li>
+
+<li>Estados de cuenta y comprobantes.</li>
+
+</ul>
+
+ 
+
+<h3>Forex</h3>
+
+<ul>
+
+<li>Compra y venta de divisas.</li>
+
+<li>Tipos de cambio negociados.</li>
+
+<li>Soporte para operaciones internacionales.</li>
+
+</ul>
+
+</section>
+
+ 
+
+<section id="financiamiento" class="module card">
+
+<h2>Financiamiento Empresarial</h2>
+
+ 
+
+<h3>Préstamos Comerciales</h3>
+
+<ul>
+
+<li>Capital de expansión.</li>
+
+<li>Refinanciamiento.</li>
+
+<li>Adquisición de activos.</li>
+
+<li>Plazos corto, mediano y largo.</li>
+
+</ul>
+
+ 
+
+<h3>Líneas Rotativas</h3>
+
+<ul>
+
+<li>Capital de trabajo.</li>
+
+<li>Inventarios.</li>
+
+<li>Cuentas por cobrar.</li>
+
+<li>Necesidades temporales de caja.</li>
+
+</ul>
+
+ 
+
+<h3>Líneas No Rotativas</h3>
+
+<ul>
+
+<li>Programas de inversión definidos.</li>
+
+<li>Los montos amortizados no vuelven a estar disponibles.</li>
+
+</ul>
+
+ 
+
+<h3>Préstamos Back to Back</h3>
+
+<ul>
+
+<li>Respaldados por depósitos.</li>
+
+<li>Liquidez inmediata.</li>
+
+<li>Condiciones competitivas.</li>
+
+</ul>
+
+ 
+
+<h3>Línea de Crédito Abastos</h3>
+
+<ul>
+
+<li>Pago a proveedores.</li>
+
+<li>Rotativa.</li>
+
+<li>Financiamientos hasta 180 días.</li>
+
+</ul>
+
+ 
+
+<h3>Tarjeta de Crédito Empresarial</h3>
+
+<ul>
+
+<li>Viajes.</li>
+
+<li>Representación.</li>
+
+<li>Compras corporativas.</li>
+
+<li>Pagos recurrentes.</li>
+
+</ul>
+
+</section>
+
+ 
+
+<section id="comercio" class="module card">
+
+<h2>Comercio Internacional</h2>
+
+ 
+
+<h3>Cartas de Crédito</h3>
+
+<ul>
+
+<li>Importación.</li>
+
+<li>Exportación.</li>
+
+<li>Stand By.</li>
+
+</ul>
+
+ 
+
+<h3>Beneficios</h3>
+
+<ul>
+
+<li>Reduce riesgos comerciales.</li>
+
+<li>Respaldo bancario.</li>
+
+<li>Facilita negocios internacionales.</li>
+
+</ul>
+
+ 
+
+<h3>Cobranzas Documentarias</h3>
+
+<ul>
+
+<li>Control documental.</li>
+
+<li>Cobranzas recibidas y enviadas.</li>
+
+</ul>
+
+ 
+
+<h3>Transferencias Internacionales</h3>
+
+<ul>
+
+<li>Envío y recepción de fondos.</li>
+
+<li>Operación en múltiples monedas.</li>
+
+<li>Trazabilidad internacional.</li>
+
+</ul>
+
+</section>
+
+ 
+
+<section id="conexion" class="module card">
+
+<h2>Conexión Regional BI</h2>
+
+ 
+
+<p>
+
+Plataforma que permite transferencias entre cuentas de entidades pertenecientes a Corporación BI.
+
+</p>
+
+ 
+
+<h3>Mercados incluidos</h3>
+
+ 
+
+<ul>
+
+<li>Guatemala</li>
+
+<li>Honduras</li>
+
+<li>El Salvador</li>
+
+<li>Panamá</li>
+
+</ul>
+
+ 
+
+<h3>Beneficios</h3>
+
+ 
+
+<ul>
+
+<li>Transferencias en tiempo real.</li>
+
+<li>Servicio sin costo sujeto a condiciones vigentes.</li>
+
+<li>Reducción de costos.</li>
+
+<li>Mayor visibilidad de liquidez.</li>
+
+<li>Centralización de fondos en Panamá.</li>
+
+</ul>
+
+ 
+
+<div class="badge">
+
+Diferenciador estratégico de Banca Regional
+
+</div>
+
+</section>
+
+ 
+
+<section id="quiz" class="module card">
+
+<h2>Evaluación Final</h2>
+
+ 
+
+<div class="question">
+
+<p><strong>1.</strong> ¿Cuál es el principal segmento de clientes de Banca Regional?</p>
+
+ 
+
+<div class="option" onclick="check(this,false)">Personas naturales sin actividad empresarial</div>
+
+<div class="option" onclick="check(this,true)">Grupos económicos y empresas corporativas regionales</div>
+
+<div class="option" onclick="check(this,false)">Estudiantes universitarios</div>
+
+</div>
+
+ 
+
+<div class="question">
+
+<p><strong>2.</strong> ¿Qué producto combina liquidez inmediata y rentabilidad superior?</p>
+
+ 
+
+<div class="option" onclick="check(this,false)">Cuenta Corriente</div>
+
+<div class="option" onclick="check(this,true)">Ahorro Plus</div>
+
+<div class="option" onclick="check(this,false)">Carta de Crédito</div>
+
+</div>
+
+ 
+
+<div class="question">
+
+<p><strong>3.</strong> ¿Qué facilidad se utiliza principalmente para capital de trabajo?</p>
+
+ 
+
+<div class="option" onclick="check(this,true)">Línea de Crédito Rotativa</div>
+
+<div class="option" onclick="check(this,false)">Transferencia Internacional</div>
+
+<div class="option" onclick="check(this,false)">Ahorro Plus</div>
+
+</div>
+
+ 
+
+<div class="question">
+
+<p><strong>4.</strong> ¿Qué herramienta reduce el riesgo entre comprador y vendedor internacional?</p>
+
+ 
+
+<div class="option" onclick="check(this,false)">Tarjeta Empresarial</div>
+
+<div class="option" onclick="check(this,false)">Forex</div>
+
+<div class="option" onclick="check(this,true)">Carta de Crédito</div>
+
+</div>
+
+ 
+
+<div class="question">
+
+<p><strong>5.</strong> ¿Qué beneficio distingue a Conexión Regional BI?</p>
+
+ 
+
+<div class="option" onclick="check(this,true)">Transferencias regionales en tiempo real</div>
+
+<div class="option" onclick="check(this,false)">Venta de seguros</div>
+
+<div class="option" onclick="check(this,false)">Financiamiento hipotecario</div>
+
+</div>
+
+ 
+
+<button onclick="finalScore()">Ver resultado</button>
+
+ 
+
+<div id="resultado" class="result"></div>
+
+ 
+
+</section>
+
+ 
+
+</div>
+
+ 
+
+<script>
+
+ 
+
+let score=0;
+
+let answered=[];
+
+ 
+
+function showModule(id){
+
+document.querySelectorAll('.module').forEach(x=>{
+
+x.classList.remove('active');
+
+});
+
+document.getElementById(id).classList.add('active');
+
+window.scrollTo(0,0);
+
+}
+
+ 
+
+function check(element,correct){
+
+ 
+
+if(answered.includes(element.parentElement)){
+
+return;
+
+}
+
+ 
+
+answered.push(element.parentElement);
+
+ 
+
+if(correct){
+
+element.classList.add('correct');
+
+score++;
+
+}else{
+
+element.classList.add('wrong');
+
+}
+
+}
+
+ 
+
+function finalScore(){
+
+ 
+
+let texto="";
+
+ 
+
+if(score>=5){
+
+texto="Excelente. Resultado: "+score+"/5 ✅";
+
+}
+
+else if(score>=3){
+
+texto="Buen trabajo. Resultado: "+score+"/5 👍";
+
+}
+
+else{
+
+texto="Resultado: "+score+"/5. Revisa nuevamente los módulos para reforzar conceptos.";
+
+}
+
+ 
+
+document.getElementById("resultado").innerHTML=texto;
+
+}
+
+ 
+
+</script>
+
+ 
+
+</body>
+
+</html>
